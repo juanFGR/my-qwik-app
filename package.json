@@ -2,7 +2,7 @@
   "name": "my-qwik-basic-starter",
   "description": "Demo App with Routing built-in (recommended)",
   "engines": {
-    "node": ">=15.0.0"
+    "node": ">=18.0.0"
   },
   "private": true,
   "scripts": {
@@ -21,7 +21,8 @@
     "qwik": "qwik",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_c4c7b490276f1a9"
   },
   "devDependencies": {
     "@builder.io/mitosis": "^0.0.119",
@@ -40,6 +41,7 @@
     "@types/node": "^20.4.5",
     "@typescript-eslint/eslint-plugin": "6.2.0",
     "@typescript-eslint/parser": "6.2.0",
+    "chromatic": "^7.2.3",
     "eslint": "8.45.0",
     "eslint-plugin-qwik": "^1.2.10",
     "eslint-plugin-storybook": "^0.6.14",
@@ -56,5 +58,8 @@
   "dependencies": {
     "@builder.io/dev-tools": "^0.1.14",
     "@builder.io/sdk-qwik": "^0.6.2"
-  }
+  },
+  "version": "",
+  "readme": "ERROR: No README data found!",
+  "_id": "my-qwik-basic-starter@"
 }
