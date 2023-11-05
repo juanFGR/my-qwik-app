@@ -4,9 +4,12 @@
   "private": true,
   "scripts": {
     "build": "qwik build",
+    "build-storybook": "storybook build",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
-    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "build.server": "vite build -c adapters/vercel-edge/vite.config.ts",
+    "chromatic": "npx chromatic --project-token=chpt_c4c7b490276f1a9",
+    "deploy": "vercel deploy",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "fmt": "prettier --write .",
@@ -14,11 +17,9 @@
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "test-storybook": "test-storybook",
-    "chromatic": "npx chromatic --project-token=chpt_c4c7b490276f1a9"
+    "qwik": "qwik"
   },
   "devDependencies": {
     "@builder.io/mitosis": "^0.0.119",
@@ -48,6 +49,7 @@
     "storybook-framework-qwik": "^0.2.4",
     "typescript": "5.1.6",
     "undici": "5.22.1",
+    "vercel": "^29.1.1",
     "vite": "4.4.7",
     "vite-tsconfig-paths": "4.2.0"
   },
