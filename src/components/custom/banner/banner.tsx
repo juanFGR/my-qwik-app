@@ -1,4 +1,4 @@
-import { component$, PropFunction, QwikMouseEvent } from "@builder.io/qwik";
+import { component$, QwikMouseEvent } from "@builder.io/qwik";
 
 
 import styles from "./banner.module.css";

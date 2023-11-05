@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "storybook-framework-qwik";
 import type { BannerProps } from "../components/custom/banner/banner";
 import Banner from "../components/custom/banner/banner";
-import { within, userEvent } from '@storybook/testing-library';
+import { within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
 
 const meta = {
