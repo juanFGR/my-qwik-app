@@ -12,8 +12,16 @@
   --qwik-light-purple: #ac7ff4;
   --qwik-dark-purple: #713fc2;
   --qwik-dirty-black: #1d2033;
-  --qwik-dark-background: #151934;
-  --qwik-dark-text: #ffffff;
+  --qwik-dark-background: #ffffff;
+  --qwik-dark-text: #000;
+}
+
+h1,h2,h3 {
+  color: black !important;
+}
+
+span {
+  color: black !important;
 }
 
 html {
