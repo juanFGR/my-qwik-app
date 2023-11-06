@@ -9,24 +9,9 @@ import { CUSTOM_COMPONENTS } from "../../components/builder-registry";
 // Enter your key here!
 export const apiKey = import.meta.env.PUBLIC_BUILDER_API_KEY; // ggignore
 
-export const MyFunComponent2 = component$((props: { text: string }) => {
-  const state = useStore({
-    count: 0,
-  });
-
-  return (
-    <div>
-      <h3>{props.text.toUpperCase()}</h3>
-      <p>{state.count}</p>
-      <button onClick$={() => state.count++}>Click me</button>
-    </div>
-  );
-});
-
-
 export const useBuilderContentLoader = routeLoader$(async event => {
   const data = await fetchOneEntry({
-    model: 'test-page',
+    model: 'qwik-page',
     apiKey: apiKey,
     userAttributes: { urlPath: event.url.pathname },
     options: event.query,
@@ -52,7 +37,7 @@ export default component$(() => {
 
   return (
     <Content
-      model="test-page"
+      model="qwik-page"
       content={content.value}
       apiKey={apiKey}
       customComponents={CUSTOM_COMPONENTS}
